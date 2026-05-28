@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Groom's Life Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Back to Language Selection -->
+    <div class="fixed top-4 right-4 z-50">
+        <a href="index.html" class="bg-white/80 backdrop-blur-sm hover:bg-white text-gray-700 px-4 py-2 rounded-full shadow-md text-sm font-medium flex items-center gap-2 border border-gray-200 transition-all">
+            🌐 <span>Change language / Zmień język</span>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="py-16 px-4 text-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">The Road to the Altar: [Groom's Name]'s Story</h1>
+        <p class="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto font-light">
+            An epic tale of how a local lad became the Groom. Created with a wink by the Best Man.
+        </p>
+    </header>
+
+    <!-- Timeline Container -->
+    <main class="max-w-6xl mx-auto px-4 py-12 relative">
+        
+        <div class="absolute left-1/2 transform -translate-x-1/2 top-12 bottom-12 w-1 bg-indigo-200 hidden md:block"></div>
+        <div class="absolute left-8 top-12 bottom-12 w-1 bg-indigo-200 block md:hidden"></div>
+
+        <!-- ITEM 1: Left Side -->
+        <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full relative">
+            <div class="w-full md:w-[45%] order-2 md:order-1 md:text-right pl-16 md:pl-0">
+                <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-semibold rounded-full mb-2">Year 1995</span>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">A Legend is Born</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        It all started here. A man comes into the world, completely unaware that decades later he will force me to wear a suit on a scorching hot Saturday. For now, he just knows how to cry and eat.
+                    </p>
+                    <div class="mt-4 overflow-hidden rounded-lg shadow-sm">
+                        <img src="img/dziecko.jpg" alt="Childhood" class="w-full h-auto max-h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white shadow-md z-10 top-1 md:top-auto"></div>
+            <div class="hidden md:block w-[45%] order-2"></div>
+        </div>
+
+        <!-- ITEM 2: Right Side -->
+        <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full relative">
+            <div class="hidden md:block w-[45%]"></div>
+            <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white shadow-md z-10 top-1 md:top-auto"></div>
+            <div class="w-full md:w-[45%] order-2 pl-16 md:pl-0">
+                <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-semibold rounded-full mb-2">School Days</span>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">The Great Meeting (Trouble Begins)</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our first meeting. That's when the plan for world domination was born, which usually ended up with us gaming until 4 AM or running away from the neighbor's dog. We survived it together.
+                    </p>
+                    <div class="mt-4 overflow-hidden rounded-lg shadow-sm">
+                        <img src="img/szkola.jpg" alt="School years" class="w-full h-auto max-h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-8 text-center text-gray-400 text-sm border-t border-gray-200 mt-12 bg-white">
+        Let's raise a toast to the Newlyweds! 🥂
+    </footer>
+
+</body>
+</html>
