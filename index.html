@@ -17,7 +17,8 @@
             <h1 class="text-2xl font-bold mb-2 tracking-wide">Enter Guest Code</h1>
             <p class="text-sm text-gray-300 mb-6">Wpisz kod z tablicy weselnej, aby odblokować historię.</p>
             
-            <input type="password" id="pin-input" placeholder="XXXX" class="w-full text-center py-3 text-2xl font-mono tracking-widest text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 mb-4 bg-white/90">
+<!--            <input type="password" id="pin-input" placeholder="XXXX" class="w-full text-center py-3 text-2xl font-mono tracking-widest text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 mb-4 bg-white/90"> -->
+            <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" placeholder="XXXX" class="w-full text-center py-3 text-2xl font-mono tracking-widest text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 mb-4 bg-white/90">
             <button onclick="checkPin()" class="w-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 transition-all text-white py-3 rounded-xl font-bold uppercase tracking-wider">Unlock / Odblokuj</button>
             <p id="error-msg" class="text-red-400 text-sm mt-3 hidden">🚫 Invalid code / Niepoprawny kod!</p>
         </div>
