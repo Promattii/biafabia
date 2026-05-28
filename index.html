@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Story - Zapraszamy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-slate-900 to-blue-900 text-white min-h-screen flex items-center justify-center font-sans antialiased px-4">
+
+    <!-- KARTA LOGOWANIA / BRAMKA -->
+    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-white/20 max-w-md w-full text-center">
+        
+        <!-- SEKCJA 1: Wpisywanie PINu -->
+        <div id="pin-section">
+            <div class="text-5xl mb-4">🔐</div>
+            <h1 class="text-2xl font-bold mb-2 tracking-wide">Enter Guest Code</h1>
+            <p class="text-sm text-gray-300 mb-6">Wpisz kod z tablicy weselnej, aby odblokować historię.</p>
+            
+            <input type="password" id="pin-input" placeholder="XXXX" class="w-full text-center py-3 text-2xl font-mono tracking-widest text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 mb-4 bg-white/90">
+            <button onclick="checkPin()" class="w-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 transition-all text-white py-3 rounded-xl font-bold uppercase tracking-wider">Unlock / Odblokuj</button>
+            <p id="error-msg" class="text-red-400 text-sm mt-3 hidden">🚫 Invalid code / Niepoprawny kod!</p>
+        </div>
+
+        <!-- SEKCJA 2: Wybór Języka (Domyślnie ukryta, pojawi się po wpisaniu PINu) -->
+        <div id="lang-section" class="hidden animate-fade-in">
+            <div class="text-5xl mb-4">🥂</div>
+            <h1 class="text-2xl font-bold mb-2 tracking-wide">Welcome / Witamy!</h1>
+            <p class="text-sm text-gray-300 mb-6">Choose your language / Wybierz język:</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Flaga Polski -->
+                <a href="pl.html" class="flex flex-col items-center bg-white/5 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition-all group">
+                    <span class="text-4xl group-hover:scale-110 transition-transform">🇵🇱</span>
+                    <span class="text-xs mt-2 font-medium">Polski</span>
+                </a>
+                <!-- Flaga Australii (Angielski) -->
+                <a href="en.html" class="flex flex-col items-center bg-white/5 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition-all group">
+                    <span class="text-4xl group-hover:scale-110 transition-transform">🇦🇺</span>
+                    <span class="text-xs mt-2 font-medium">English</span>
+                </a>
+                <!-- Flaga Niemiec -->
+                <a href="de.html" class="flex flex-col items-center bg-white/5 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition-all group">
+                    <span class="text-4xl group-hover:scale-110 transition-transform">🇩🇪</span>
+                    <span class="text-xs mt-2 font-medium">Deutsch</span>
+                </a>
+                <!-- Flaga Brazylii -->
+                <a href="pt.html" class="flex flex-col items-center bg-white/5 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition-all group">
+                    <span class="text-4xl group-hover:scale-110 transition-transform">🇧🇷</span>
+                    <span class="text-xs mt-2 font-medium font-medium">Português</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT DO WERYFIKACJI PINU -->
+    <script>
+        function checkPin() {
+            const enteredPin = document.getElementById('pin-input').value;
+            const correctPin = "2026"; // <--- TUTAJ WPISZ SWÓJ CUKIERKOWY PIN WESELNY
+            const errorMsg = document.getElementById('error-msg');
+
+            if(enteredPin === correctPin) {
+                // Ukryj sekcję PIN, pokaż sekcję Języków
+                document.getElementById('pin-section').classList.add('hidden');
+                document.getElementById('lang-section').classList.remove('hidden');
+            } else {
+                // Pokaż błąd
+                errorMsg.classList.remove('hidden');
+                // Efekt lekkiego potrząsania inputem (opcjonalnie)
+                document.getElementById('pin-input').value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
